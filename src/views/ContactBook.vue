@@ -20,8 +20,14 @@
                     <i class="fas fa-redo"></i> Làm mới
                 </button>
                 <button class="btn btn-sm btn-success" @click="goToAddContact">
-                    <i class="fas fa-plus"></i> Thêm mới
-                </button>
+                    <router-link
+                        :to="{
+                            name: 'contact.create',
+                        }"
+                    >
+                        <i class="fas fa-plus"></i> Thêm mới
+                    </router-link>
+                </button>             
                 <button
                     class="btn btn-sm btn-danger"
                     @click="removeAllContacts"
